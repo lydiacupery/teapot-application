@@ -1,0 +1,76 @@
+﻿<Window x:Class="TeapotApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeapotApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" ></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1"
+               x:Name="TeapotMessage"
+               Foreground="#803300"
+               FontSize="17"
+               Width="450"
+               TextWrapping="Wrap"
+                   TextAlignment="Center"
+               HorizontalAlignment="Center">
+            HELLO FROM THE TEAPOTS</TextBlock>
+        <Grid x:Name="teapotGrid" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="1" 
+               Grid.Column="0"
+               Width="200" 
+               Height="200" 
+               x:Name="TeapotImage"
+               Source="Assets/TeapotBoring.png"></Image>
+            <CheckBox Grid.Row="2"
+                  Grid.Column="0"
+                  Margin="60 0 0 0"
+                  x:Name="Whistling" >Whistling</CheckBox>
+            <CheckBox Grid.Row="3"
+                  Grid.Column="0"
+                  Margin="60 0 0 0"
+                  x:Name="NotWhistling">Not Whistling</CheckBox>
+            <CheckBox Grid.Row="4"
+                  Grid.Column="0"
+                  Margin="60 0 0 0"
+                  x:Name="BoilingOver">Boiling Over</CheckBox>
+            <Image Grid.Row="1" 
+               Grid.Column="2"
+               Width="200" 
+               Height="200" 
+               x:Name="TeapotImage2"
+               Source="Assets/TeapotBoringGreen.png"></Image>
+            <CheckBox Grid.Row="2"
+                  Grid.Column="2"
+                  Margin="60 0 0 0"
+                  x:Name="Whistling2">Whistling</CheckBox>
+            <CheckBox Grid.Row="3"
+                  Grid.Column="2"
+                  Margin="60 0 0 0"
+                  x:Name="NotWhistling2">Not Whistling</CheckBox>
+            <CheckBox Grid.Row="4"
+                  Grid.Column="2"
+                  Margin="60 0 0 0"
+                  x:Name="BoilingOver2">Boiling Over</CheckBox>
+        </Grid>
+    </Grid>
+</Window>
